@@ -1,0 +1,26 @@
+{
+    "page-title": "Yahoo finance agregator podataka",
+    "en_GB": "Engleski",
+    "bs_Latn_BA": "Bosanski",
+    "search": "Traži",
+
+    "tickers": {
+        "name": "Naziv",
+        "market-cap": "Ukupna vrijednost",
+        "city": "Grad",
+        "state": "Država",
+        "founded-year": "Godina osnivanja",
+        "number-of-employees": "Broj uposlenika",
+        "open-price": "Cijena pri otvaranju marketa",
+        "close-price": "Cijena pri zatvaranju marketa",
+        "prices-for-date-not-found": "Cijene za uneseni datum nisu pronađene",
+        "ticker-not-found": "Dionice sa unesenom oznakom nisu pronađene",
+        "add-ticker-to-filters": "Dodaj oznaku u filtere",
+        "ticker-symbol": "Simbol dionickockog društva",
+        "at-least-one-ticker-required": "Potrebno je dodati bar jednu oznaku u filtere",
+        "date-must-be-less-than-today": "Odabrani datum mora biti manji od današnjeg",
+        "date-is-required": "Potrebno je odabrati datum",
+        "market-open-date-time": "Datum i vrijeme otvaranja",
+        "market-close-date-time": "Datum i vrijeme zatvaranja"
+    }
+}

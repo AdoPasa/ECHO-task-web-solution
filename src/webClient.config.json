@@ -1,0 +1,5 @@
+{
+  "apiBaseUrl": "https://localhost:7267/api",
+  "uiBaseUrl": "http://localhost:4200",
+  "siteTitle": "Yahoo finance agregator UI"
+}

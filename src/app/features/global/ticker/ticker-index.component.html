@@ -1,0 +1,30 @@
+<div class="content-wrapper">
+  <div class="filters-row">
+    <div class="ticker-filter">
+      <input type="text" placeholder="{{ 'tickers.ticker-symbol' | translate }}" [(ngModel)]="tickerSymbol" />
+      <button mat-stroked-button (click)="addTicker()">{{ 'tickers.add-ticker-to-filters' | translate }}</button>
+    </div>
+
+    <div class="date-filter">
+      <input type="date" [(ngModel)]="selectedDate"  />
+      <button mat-stroked-button (click)="searchTickers()">{{ 'search' | translate }}</button>
+    </div>
+
+  </div>
+
+  <div class="ticker-filter-list">
+    <div *ngFor="let item of tickerList" class="ticker-filter-item">
+      <span>
+        {{item}} 
+      </span>
+
+      <button>
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="ticker-list">
+    <app-ticker-item  *ngFor="let ticker of loadedTickerData" [data]="ticker"></app-ticker-item>
+  </div>
+</div>

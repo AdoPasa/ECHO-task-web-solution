@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$yahoo-web-primary: mat.define-palette(mat.$indigo-palette);
+$yahoo-web-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$yahoo-web-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$yahoo-web-theme: mat.define-light-theme((
+  color: (
+    primary: $yahoo-web-primary,
+    accent: $yahoo-web-accent,
+    warn: $yahoo-web-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($yahoo-web-theme);
+
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}

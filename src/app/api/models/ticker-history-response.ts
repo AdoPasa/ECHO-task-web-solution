@@ -1,0 +1,19 @@
+export interface TickerHistoryResponse {
+    symbol?: null | string;
+    date?: null | string;
+    status?: null | number;
+    companyName?: null | string;
+    marketCap?: null | number;
+    foundedYear?: null | number;
+    numberOfEmployees?: null | number;
+    headquarterCity?: null | string;
+    headquarterState?: null | string;
+    closedPrice?: null | number;
+    openPrice?: null | number;
+    marketTimeZone?: null | string; 
+    localTimeZone?: null | string; 
+    marketOpenDateTime?: null | string; 
+    marketCloseDateTime?: null | string; 
+    localOpenDateTime?: null | string; 
+    localCloseDateTime?: null | string; 
+}

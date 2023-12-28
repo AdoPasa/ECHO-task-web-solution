@@ -1,0 +1,26 @@
+{
+    "page-title": "Yahoo finance agregator",
+    "en_GB": "English",
+    "bs_Latn_BA": "Bosnian",
+    "search": "Search",
+
+    "tickers": {
+        "name": "Name",
+        "market-cap": "Market cap",
+        "city": "City",
+        "state": "State",
+        "founded-year": "Founded year",
+        "number-of-employees": "Number of employees",
+        "open-price": "Open price",
+        "close-price": "Close price",
+        "prices-for-date-not-found": "Prices for selected date not found",
+        "ticker-not-found": "Ticker data not found",
+        "add-ticker-to-filters": "Add ticker to filters",
+        "ticker-symbol": "Ticker symbol",
+        "at-least-one-ticker-required": "At least one ticker required",
+        "date-must-be-less-than-today": "Date must be less than today",
+        "date-is-required": "Date is required",
+        "market-open-date-time": "Market opening date and time",
+        "market-close-date-time": "Market closing date and time"
+    }
+}

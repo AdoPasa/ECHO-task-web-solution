@@ -1,0 +1,43 @@
+<mat-card *ngIf="data">
+  <mat-card-header>
+    <mat-card-title>{{ data.symbol }}</mat-card-title>
+    
+    <mat-card-subtitle>
+      <span *ngIf="data.companyName">{{ data.companyName }}&nbsp;</span>
+      <span *ngIf="data.headquarterCity">| {{ data.headquarterCity }}, {{ data.headquarterState }}</span>
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content *ngIf="(data.status ?? 0) > 1">
+    <ul>
+      <li><b>{{ 'tickers.name' | translate }}:</b> {{data.companyName}}</li>
+      <li *ngIf="data.marketCap! > 0"><b>{{ 'tickers.market-cap' | translate }}:</b> {{data.marketCap}} $</li>
+      <li *ngIf="data.headquarterCity"><b>{{ 'tickers.city' | translate }}:</b> {{data.headquarterCity}}</li>
+      <li *ngIf="data.headquarterState"><b>{{ 'tickers.state' | translate }}:</b> {{data.headquarterState}}</li>
+      <li *ngIf="data.foundedYear"><b>{{ 'tickers.founded-year' | translate }}:</b> {{data.foundedYear}}</li>
+      <li *ngIf="data.numberOfEmployees"><b>{{ 'tickers.number-of-employees' | translate }}:</b> {{data.numberOfEmployees}}</li>
+    </ul>
+
+    <ul *ngIf="data.status == 4">
+      <li><b>{{ 'tickers.open-price' | translate }}:</b> {{data.openPrice}}</li>
+      <li class="grayed-out" *ngIf="data.marketTimeZone"><b>{{ 'tickers.market-open-date-time' | translate }}:</b> {{data.marketOpenDateTime}} ({{data.marketTimeZone}})</li>
+      <li class="grayed-out" *ngIf="data.marketTimeZone"><b>{{ 'tickers.market-open-date-time' | translate }}:</b> {{data.localOpenDateTime}} ({{data.localTimeZone}})</li>
+      <li><b>{{ 'tickers.close-price' | translate }}:</b> {{data.closedPrice}}</li>
+      <li><b>{{ 'tickers.market-close-date-time' | translate }}:</b> {{data.openPrice}}</li>
+      <li class="grayed-out" *ngIf="data.marketTimeZone"><b>{{ 'tickers.market-close-date-time' | translate }}:</b> {{data.marketCloseDateTime}} ({{data.marketTimeZone}})</li>
+      <li class="grayed-out" *ngIf="data.marketTimeZone"><b>{{ 'tickers.market-close-date-time' | translate }}:</b> {{data.localCloseDateTime}} ({{data.localTimeZone}})</li>
+    </ul>
+
+    <div *ngIf="data.status == 3">
+      <h3>{{ 'tickers.prices-for-date-not-found' | translate }}</h3>
+    </div>
+  </mat-card-content>
+
+  <mat-card-content *ngIf="data.status == 1">
+    <h2>{{ 'tickers.ticker-not-found' | translate }}</h2>
+  </mat-card-content>
+
+  <mat-card-footer *ngIf="data.status == 0 || data.status == 2">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
